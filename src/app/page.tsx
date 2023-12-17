@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import Form from "./client";
 
 export default function Home() {
   return (
@@ -14,13 +15,7 @@ export default function Home() {
         with similar emotional movements to your message, providing unexpected
         connections.
       </p>
-      <div className="mt-7 inline-flex items-center text-lg gap-x-5">
-        <Input placeholder="Enter Text..." />
-        <Button>Submit</Button>
-      </div>
-      <div className="py-10 grid grid-cols-4">
-        <Link href="/post/aa">edad</Link>
-      </div>
+      <Form />
     </main>
   );
 }

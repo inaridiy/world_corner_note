@@ -1,0 +1,27 @@
+{
+  "name": "supabase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema": "supabase gen types typescript --schema public --linked > ./schema.ts",
+    "better-schema": "better-supabase-types -i ./schema.ts -f",
+    "format": "pnpm dlx @biomejs/biome format ./schema.ts --write",
+    "generate": "pnpm run schema && pnpm run better-schema && pnpm run format"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    "./schema": {
+      "types": "./schema.ts"
+    }
+  },
+  "devDependencies": {
+    "supabase": "^1.123.4",
+    "better-supabase-types": "^2.7.0",
+    "@biomejs/biome": "1.4.1"
+  }
+}

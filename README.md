@@ -14,6 +14,10 @@ Of course, you can also post anonymous notes yourself as part of this world.
 
 There is no set usage for this service. We just wanted to create such a magical space.
 
+## How to use
+
+access to https://www.world-corner.net/
+
 ## Tech Stack
 
 - Hosting: Vercel

@@ -9,13 +9,50 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      [_ in never]: never;
+      memo: {
+        Row: {
+          created_at: string;
+          embedding: string | null;
+          favorite: number;
+          id: string;
+          memo: string;
+        };
+        Insert: {
+          created_at: string;
+          embedding?: string | null;
+          favorite: number;
+          id: string;
+          memo: string;
+        };
+        Update: {
+          created_at?: string;
+          embedding?: string | null;
+          favorite?: number;
+          id?: string;
+          memo?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      search_memo: {
+        Args: {
+          query_embedding: string;
+          match_threshold: number;
+          max_limit: number;
+        };
+        Returns: {
+          id: string;
+          memo: string;
+          favorite: number;
+          embedding: string;
+          created_at: string;
+          similarity: number;
+        }[];
+      };
     };
     Enums: {
       [_ in never]: never;
@@ -107,3 +144,13 @@ export type Enums<
     : never;
 
 // Schema: public
+// Tables
+export type Memo = Database["public"]["Tables"]["memo"]["Row"];
+export type InsertMemo = Database["public"]["Tables"]["memo"]["Insert"];
+export type UpdateMemo = Database["public"]["Tables"]["memo"]["Update"];
+
+// Functions
+export type ArgsSearchMemo =
+  Database["public"]["Functions"]["search_memo"]["Args"];
+export type ReturnTypeSearchMemo =
+  Database["public"]["Functions"]["search_memo"]["Returns"];

@@ -4,7 +4,7 @@ Read the posts of an anonymous someone and post as anonymous. In a world without
 
 ## What is this?
 
-This service is a notepad of extreme simplicity. What makes it different from others is that there are no identities and there is no strict search.
+This service is a notepad of extreme simplicity. What makes it different from others is that there are no identities and there is no strict search with keywords.
 
 The service uses a vector search to find anonymous notes written by others.
 You can then Favtite the memos you like.

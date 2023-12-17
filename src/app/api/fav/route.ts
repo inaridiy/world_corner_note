@@ -7,7 +7,6 @@ export const runtime = "edge";
 
 export async function POST(request: NextRequest) {
   const supabase = createSupabaseClient();
-  const openai = createOpenAIClient();
 
   const body = await request.json();
   if (!body) return new NextResponse("Missing body", { status: 400 });

@@ -14,6 +14,8 @@ export async function POST(request: NextRequest) {
   if (!body) return new NextResponse("Missing body", { status: 400 });
   if (!body.memo || typeof body.memo !== "string")
     return new NextResponse("Invalid body", { status: 400 });
+  if (body.memo.length > 280)
+    return new NextResponse("Invalid body", { status: 400 });
 
   const embeddings = await openai.embeddings.create({
     model: "text-embedding-ada-002",

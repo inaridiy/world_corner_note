@@ -18,6 +18,8 @@ export async function GET(
     return new NextResponse("Invalid query", { status: 400 });
   if (query === "teapot")
     return new NextResponse("I'm a teapot", { status: 418 });
+  if (query.length > 280)
+    return new NextResponse("Invalid body", { status: 400 });
 
   const embeddings = await openai.embeddings.create({
     model: "text-embedding-ada-002",

@@ -1,13 +1,22 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl">Finding an unaddressed letter</h1>
-      <p>
-        Enter text in the form below to mention a message you have stumbled
-        across.
+    <main className="mx-auto text-center px-4 max-w-2xl py-28">
+      <h1 className="md:text-5xl text-3xl mb-7 font-bold text-center">
+        Discover Letters That Resonate with Your Heart
+      </h1>
+      <p className="text-center text-slate-500">
+        Please write anything freely on this form about your thoughts, feelings,
+        or daily events. Vector search technology will find words from people
+        with similar emotional movements to your message, providing unexpected
+        connections.
       </p>
+      <div className="mt-7 inline-flex items-center text-lg gap-x-5">
+        <Input placeholder="Enter Text..." />
+        <Button>Submit</Button>
+      </div>
     </main>
   );
 }

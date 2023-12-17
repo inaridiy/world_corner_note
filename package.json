@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.298.0",
     "next": "14.0.4",
+    "openai": "^4.23.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.1.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "uuidv7": "^0.6.3"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
+    "supabase": "workspace:^",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

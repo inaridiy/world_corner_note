@@ -38,6 +38,12 @@ export interface Database {
       [_ in never]: never;
     };
     Functions: {
+      favorite: {
+        Args: {
+          memo_id: string;
+        };
+        Returns: undefined;
+      };
       search_memo: {
         Args: {
           query_embedding: string;
@@ -150,6 +156,10 @@ export type InsertMemo = Database["public"]["Tables"]["memo"]["Insert"];
 export type UpdateMemo = Database["public"]["Tables"]["memo"]["Update"];
 
 // Functions
+export type ArgsFavorite = Database["public"]["Functions"]["favorite"]["Args"];
+export type ReturnTypeFavorite =
+  Database["public"]["Functions"]["favorite"]["Returns"];
+
 export type ArgsSearchMemo =
   Database["public"]["Functions"]["search_memo"]["Args"];
 export type ReturnTypeSearchMemo =

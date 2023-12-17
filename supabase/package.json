@@ -8,8 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "schema": "supabase gen types typescript --schema public --linked > ./schema.ts",
     "better-schema": "better-supabase-types -i ./schema.ts -f",
-    "format": "pnpm dlx @biomejs/biome format ./schema.ts --write",
-    "generate": "pnpm run schema && pnpm run better-schema && pnpm run format"
+    "generate": "pnpm run schema && pnpm run better-schema"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +20,6 @@
   },
   "devDependencies": {
     "supabase": "^1.123.4",
-    "better-supabase-types": "^2.7.0",
-    "@biomejs/biome": "1.4.1"
+    "better-supabase-types": "^2.7.0"
   }
 }

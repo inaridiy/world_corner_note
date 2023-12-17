@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Toaster from "@/app/toaster";
+import { Github } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,14 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Toaster />
+        <div className="fixed top-4 right-4">
+          <a
+            className="rounded-full p-2"
+            href="https://github.com/inaridiy/world_corner_note"
+          >
+            <Github size={32} />
+          </a>
+        </div>
       </body>
     </html>
   );

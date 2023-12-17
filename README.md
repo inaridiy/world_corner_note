@@ -1,4 +1,4 @@
-## World Corner Note
+# World Corner Note
 
 Read the posts of an anonymous someone and post as anonymous. In a world without the existence of precise searches, encounter fleeting moments through someone's notebook
 

@@ -9,7 +9,7 @@ Read the posts of an anonymous someone and post as anonymous. In a world without
 This service is a notepad of extreme simplicity. What makes it different from others is that there are no identities and there is no strict search with keywords.
 
 The service uses a vector search to find anonymous notes written by others.
-You can then Favtite the memos you like.
+You can then Favtite the notes you like.
 Of course, you can also post anonymous notes yourself as part of this world.
 
 There is no set usage for this service. We just wanted to create such a magical space.
